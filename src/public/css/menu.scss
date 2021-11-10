@@ -1,0 +1,82 @@
+nav {
+  background: #fff;
+  width: 100%;
+  user-select: none;
+  -webkit-app-region: drag;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 3rem;
+  background-color: #333;
+  color: #fff;
+
+  p {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-left: 1.5rem;
+    height: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .actions {
+    position: relative;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    padding: 0 1rem;
+    border: 1px solid #222;
+    height: 3rem;
+    -webkit-app-region: no-drag;
+
+    .btns {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      border: none;
+      margin: 0 3px;
+      font-size: 0.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.1s ease-in-out;
+    }
+
+    .close-btn {
+      background-color: #c53a3a;
+      color: #fff;
+
+      &:hover {
+        background-color: #942b2b;
+      }
+    }
+
+    .minimize-btn {
+      background-color: #d8b010;
+      color: #fff;
+
+      &:hover {
+        background-color: #b79c00;
+      }
+    }
+
+    .maximize-btn {
+      background-color: #26a159;
+      color: #fff;
+
+      &:hover {
+        background-color: #1d8e4e;
+      }
+    }
+  }
+}

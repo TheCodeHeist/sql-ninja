@@ -1,0 +1,107 @@
+nav {
+  background: #fff;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-app-region: drag;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  height: 3rem;
+  background-color: #333;
+  color: #fff;
+}
+
+nav p {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-left: 1.5rem;
+  height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+nav .actions {
+  position: relative;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 6rem;
+  padding: 0 1rem;
+  border: 1px solid #222;
+  height: 3rem;
+  -webkit-app-region: no-drag;
+}
+
+nav .actions .btns {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  margin: 0 3px;
+  font-size: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+}
+
+nav .actions .close-btn {
+  background-color: #c53a3a;
+  color: #fff;
+}
+
+nav .actions .close-btn:hover {
+  background-color: #942b2b;
+}
+
+nav .actions .minimize-btn {
+  background-color: #d8b010;
+  color: #fff;
+}
+
+nav .actions .minimize-btn:hover {
+  background-color: #b79c00;
+}
+
+nav .actions .maximize-btn {
+  background-color: #26a159;
+  color: #fff;
+}
+
+nav .actions .maximize-btn:hover {
+  background-color: #1d8e4e;
+}
+/*# sourceMappingURL=menu.css.map */

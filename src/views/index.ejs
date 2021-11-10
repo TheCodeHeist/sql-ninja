@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title id="title">SQL Ninja</title>
+  </head>
+  <body>
+    <nav>
+      <p id="title-holder"></p>
+
+      <div class="actions">
+        <button class="btns minimize-btn">
+          <i class="fas fa-window-minimize"></i>
+        </button>
+        <button class="btns maximize-btn">
+          <i class="fas fa-window-maximize" id="max-unmax"></i>
+        </button>
+        <button class="btns close-btn"><i class="fas fa-times"></i></button>
+      </div>
+    </nav>
+
+    <main>
+      <article>
+        <h1>SQL Ninja</h1>
+
+        <section>
+          <h3>Establish Connection</h3>
+
+          <form action="/connect" method="post">
+            <label for="host">Host</label>
+            <input type="text" id="host" name="host" value="localhost" />
+
+            <label for="port">Port</label>
+            <input type="text" id="port" name="port" value="3306" />
+
+            <label for="user">User</label>
+            <input type="text" id="user" name="user" value="root" />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+
+            <button type="submit">Connect</button>
+          </form>
+        </section>
+      </article>
+    </main>
+
+    <!-- Scripts -->
+    <script
+      src="https://kit.fontawesome.com/5189c9619d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/menu.js"></script>
+  </body>
+</html>
