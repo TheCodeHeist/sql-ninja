@@ -1,10 +1,13 @@
 {
   "name": "sql-ninja",
   "version": "1.0.0",
-  "description": "An open-source MySQL/MariaDB CLient",
+  "description": "An open-source MySQL CLient",
   "main": "app.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack-win32": "electron-packager . --platform win32 --arch x64 --out dist/",
+    "pack-linux": "electron-packager . --platform linux --arch x64 --out dist/",
+    "deb-installer": "electron-installer-debian --src dist/sql-ninja-linux-x64/ --arch amd64 --config deb-config.json"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
   },
   "devDependencies": {
     "electron": "^15.3.1",
+    "electron-packager": "^15.4.0",
     "nodemon": "^2.0.14"
   }
 }
