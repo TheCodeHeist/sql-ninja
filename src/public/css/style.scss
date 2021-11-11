@@ -1,1 +1,105 @@
+main {
+  background-color: #aaaaaa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 3rem);
 
+  article {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    section.brand {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 1rem;
+
+    //   img {
+    //     height: 3rem;
+    //     margin-right: 1rem;
+    //   }
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+
+    section.sql-connect {
+      background-color: #333;
+      color: #fff;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1.5rem;
+      width: 25rem;
+      height: 40rem;
+      box-shadow: 0 0.25rem 0.5rem #0000001a;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h3 {
+        margin-bottom: 0.5rem;
+        width: 100%;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 90%;
+
+        label {
+          width: 100%;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        input {
+          width: 22rem;
+          height: 2rem;
+          border-radius: 10px;
+          border: 1px solid #fff;
+          background-color: #333;
+          color: #fff;
+          padding: 0.2rem 1.3rem;
+          margin-bottom: 0.5rem;
+          font-size: 1rem;
+          font-family: "Roboto", sans-serif;
+        }
+
+        button {
+          width: 100%;
+          height: 2.5rem;
+          border-radius: 10px;
+          border: 1px solid #206129;
+          background-color: #297a34;
+          color: #fff;
+          padding: 0.2rem 1.3rem;
+          margin-bottom: 0.5rem;
+          font-size: 1rem;
+          font-family: "Roboto", sans-serif;
+          transition: background-color 0.2s ease-in-out;
+
+          &:hover {
+            background-color: #206129;
+          }
+        }
+      }
+    }
+  }
+}

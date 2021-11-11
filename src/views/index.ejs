@@ -10,6 +10,7 @@
     <title id="title">SQL Ninja</title>
   </head>
   <body>
+    <!-- Toolbar -->
     <nav>
       <p id="title-holder"></p>
 
@@ -24,11 +25,15 @@
       </div>
     </nav>
 
+    <!-- Main Thing -->
     <main>
       <article>
-        <h1>SQL Ninja</h1>
+        <section class="brand">
+          <!-- <img src="/img/logo.png" alt="SQL Ninja Logo" /> -->
+          <h1>SQL Ninja</h1>
+        </section>
 
-        <section>
+        <section class="sql-connect">
           <h3>Establish Connection</h3>
 
           <form action="/connect" method="post">
@@ -43,6 +48,9 @@
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" />
+
+            <label for="database">Database</label>
+            <input type="text" id="database" name="database" />
 
             <button type="submit">Connect</button>
           </form>

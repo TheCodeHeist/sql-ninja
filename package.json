@@ -1,7 +1,7 @@
 {
   "name": "sql-ninja",
   "version": "1.0.0",
-  "description": "An open-source MySQL CLient",
+  "description": "An open-source MySQL Client",
   "main": "app.js",
   "scripts": {
     "start": "electron .",
@@ -20,14 +20,13 @@
   },
   "homepage": "https://github.com/TheCodeHeist/sql-ninja#readme",
   "dependencies": {
-    "@electron/remote": "^2.0.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-flash": "^0.0.2"
+    "express-flash": "^0.0.2",
+    "mysql2": "^2.3.3-rc.0"
   },
   "devDependencies": {
     "electron": "^15.3.1",
-    "electron-packager": "^15.4.0",
-    "nodemon": "^2.0.14"
+    "electron-packager": "^15.4.0"
   }
 }
