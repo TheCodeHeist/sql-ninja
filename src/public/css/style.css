@@ -1,5 +1,5 @@
 main {
-  background-color: #aaaaaa;
+  background-color: #474747;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,10 +54,17 @@ main article section.brand {
   padding: 1rem;
 }
 
+main article section.brand img#logo {
+  width: 5rem;
+  margin-right: 1rem;
+}
+
 main article section.brand h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 800;
   margin: 0;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
 }
 
 main article section.sql-connect {
@@ -125,6 +132,13 @@ main article section.sql-connect form input {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+
+main article section.sql-connect form input:focus {
+  outline: none;
+  border: 3px solid #2893da;
 }
 
 main article section.sql-connect form button {

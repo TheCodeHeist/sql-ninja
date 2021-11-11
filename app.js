@@ -12,8 +12,9 @@ let win;
 function createWindow() {
   win = new BrowserWindow({
     width: 1500,
-    height: 900,
+    height: 1000,
     frame: false,
+    icon: __dirname + "/src/public/img/logo_rnd.png",
     autoHideMenuBar: true,
     webPreferences: {
       nodeIntegration: true,
