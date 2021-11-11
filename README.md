@@ -2,6 +2,8 @@
 
 ### **SQL Ninja** is an open-source MySQL Client, made with ElectronJS, NodeJS and ExpressJS.
 
+<img src="./src/public/img/logo_rnd.svg" style="width: 15rem; margin-top: 2rem" alt="Logo" />
+
 ---
 
 ## **OS Support**
