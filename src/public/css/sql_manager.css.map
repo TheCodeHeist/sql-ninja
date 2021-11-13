@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "sql_manager.scss"
+    ],
+    "names": [],
+    "file": "sql_manager.css"
+}

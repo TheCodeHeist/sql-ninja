@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/menu.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/sql_manager.css" />
     <title id="title">SQL Ninja</title>
   </head>
   <body>
@@ -78,33 +78,45 @@
         <p><%= messages.error %></p>
       </div>
       <% } %>
+
       <article>
-        <section class="brand">
-          <img src="/img/logo_rnd.svg" alt="SQL Ninja Logo" id="logo" />
-          <h1>SQL Ninja</h1>
+        <section class="sql-form">
+          <form action="/validate_sql" method="post">
+            <input type="text" name="sql" placeholder="Enter your SQL here" />
+            <button type="submit">
+              <i class="fas fa-arrow-right"></i>Execute
+            </button>
+          </form>
         </section>
 
-        <section class="sql-connect">
-          <h3>Establish Connection</h3>
-
-          <form action="/sql_manager" method="post">
-            <label for="host">Host</label>
-            <input type="text" id="host" name="host" value="localhost" />
-
-            <label for="port">Port</label>
-            <input type="text" id="port" name="port" value="3306" />
-
-            <label for="user">User</label>
-            <input type="text" id="user" name="user" value="root" />
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" />
-
-            <label for="database">Database</label>
-            <input type="text" id="database" name="database" />
-
-            <button type="submit">Connect</button>
-          </form>
+        <section class="sql-result">
+          <% if (typeof messages.result !== 'undefined' && messages.result !==
+          '') { %>
+          <div class="result-body">
+            <% if (messages.result.length > 0) { %>
+            <table>
+              <thead>
+                <tr>
+                  <% for (const key in messages.result[0]) { %>
+                  <th><%= key %></th>
+                  <% } %>
+                </tr>
+              </thead>
+              <tbody>
+                <% for (const row of messages.result) { %>
+                <tr>
+                  <% for (const key in row) { %>
+                  <td><%= row[key] %></td>
+                  <% } %>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+            <% } else { %>
+            <p>No results found!</p>
+            <% } %>
+          </div>
+          <% } %>
         </section>
       </article>
     </main>

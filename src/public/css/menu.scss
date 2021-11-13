@@ -10,7 +10,7 @@ nav {
   background-color: #333;
   color: #fff;
 
-  p {
+  div.nav-logo {
     position: relative;
     left: 0;
     top: 0;
@@ -18,12 +18,26 @@ nav {
     padding-left: 1.5rem;
     height: 3rem;
     overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    font-weight: 600;
+    
+    img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      margin-right: 1rem;
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    p {
+      text-overflow: ellipsis;
+      font-size: 1rem;
+      font-weight: 600;
+    }
   }
 
   .actions {

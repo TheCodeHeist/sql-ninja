@@ -2,6 +2,7 @@
 
 const { app, BrowserWindow, ipcMain } = require("electron");
 const server = require("./src/server");
+const DiscordRPC = require("discord-rpc");
 
 console.clear();
 console.log("Starting server...");
@@ -56,3 +57,21 @@ app.on("activate", () => {
     createWindow();
   }
 });
+
+const clientId = "908993387074572288";
+const rpc = new DiscordRPC.Client({ transport: "ipc" });
+
+rpc.on("ready", () => {
+  console.log("Discord RPC ready...");
+
+  rpc.setActivity({
+    details: "Surfing the SQL World",
+    state: "using SQL Ninja",
+    startTimestamp: new Date(),
+    largeImageKey: "logo_rnd",
+    largeImageText: "SQL Ninja",
+    instance: false,
+  });
+});
+
+rpc.login({ clientId }).catch(console.error);
