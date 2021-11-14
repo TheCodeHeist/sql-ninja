@@ -54,21 +54,23 @@ server.post("/validate_sql", (req, res) => {
 
   connection.query(sql, (err, results) => {
     if (err) {
-      console.log(err);
-      req.flash("error", err);
+      req.flash("error", err.sqlMessage);
       res.redirect("/sql_manager");
     } else {
       if (results.length > 0) {
-        if (Array.isArray(results)) {
-          req.flash("result", results);
-          req.flash("result_type", "array");
-        } else {
-          req.flash("result", results);
-          req.flash("result_type", "object");
-        }
+        req.flash("result", results);
       } else {
-        req.flash("result", "No results");
-        req.flash("result_type", "string");
+        req.flash("result", [
+          {
+            fieldCount: results.fieldCount,
+            affectedRows: results.affectedRows,
+            insertId: results.insertId,
+            info: results.info,
+            serverStatus: results.serverStatus,
+            warningStatus: results.warningStatus,
+          },
+        ]);
+        req.flash("info", "No legitimate result!");
       }
 
       res.redirect("/sql_manager");

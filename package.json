@@ -7,13 +7,14 @@
     "start": "electron .",
     "pack-win32": "electron-packager . --platform win32 --arch x64 --out dist/",
     "pack-linux": "electron-packager . --platform linux --arch x64 --out dist/",
-    "deb-installer": "electron-installer-debian --src dist/sql-ninja-linux-x64/ --arch amd64 --config deb-config.json"
+    "deb-installer": "electron-installer-debian --src dist/sql-ninja-linux-x64/ --arch amd64 --config deb-config.json",
+    "build:linux": "electron-builder --linux"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheCodeHeist/sql-ninja.git"
   },
-  "author": "Md. Riyasat Hossain (TheCodeHeist)",
+  "author": "Md. Riyasat Hossain (TheCodeHeist) <riyasat.hossain.29@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TheCodeHeist/sql-ninja/issues"
@@ -31,6 +32,18 @@
   },
   "devDependencies": {
     "electron": "^15.3.1",
+    "electron-builder": "^22.13.1",
     "electron-packager": "^15.4.0"
+  },
+  "build": {
+    "appId": "com.thecodeheist.sqlninja",
+    "linux": {
+      "target": [
+        "deb",
+        "rpm",
+        "pacman"
+      ],
+      "category": "Utility"
+    }
   }
 }
